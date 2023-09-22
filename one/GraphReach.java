@@ -1,7 +1,7 @@
 import java.util.Queue;
 import java.util.LinkedList;
 
-public class GraphReach extends GraphWtAL {
+public class GraphReach extends GraphWtAL1 {
 
     public GraphReach(int size) {
         super(size);

@@ -5,13 +5,13 @@
 //****************************************************
 
 
-public class GraphWtAL
+public class GraphWtAL1
 {
     protected int n;
     protected GNode AdjList[];
     protected int mark[];
     
-    public GraphWtAL(int size)
+    public GraphWtAL1(int size)
     {
 	n = size;
 	AdjList = new GNode[n];
