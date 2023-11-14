@@ -65,6 +65,17 @@ public class DGraphReach extends DGraphWtAL {
                 list.weight += minCapacity;
             }
         }
+//      update inverse edges for later algorithms
+        for (GNode list = InAL[v]; list != null; list = list.next) {
+            if (list.nbr == u) {
+                list.weight -= minCapacity;
+            }
+        }
+        for (GNode list = InAL[u]; list != null; list = list.next) {
+            if (list.nbr == v) {
+                list.weight += minCapacity;
+            }
+        }
     }
 
     public int[] reachableNode(int source) {
@@ -98,4 +109,34 @@ public class DGraphReach extends DGraphWtAL {
         return result;
     }
 
+    public int[] reverseReachableNode(int source) {
+        //      initializing mark list for search
+        Queue<Integer> queue = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            mark[i] = -1;
+        }
+//      starting our search from source
+        mark[source] = 0;
+        queue.add(source);
+        while (!queue.isEmpty()) {
+            Integer u = queue.remove();
+            for (GNode list = InAL[u]; list != null; list = list.next) {
+//              checking if the edge remaining capacity is not 0
+                if (mark[list.nbr] == -1 && list.weight > 0) {
+                    mark[list.nbr] = mark[u] + 1;
+                    queue.add(list.nbr);
+                }
+            }
+        }
+//      cleaning result based on mark array
+        int[] result = new int[n];
+        for (int i = 0; i < n; i++) {
+            if (mark[i] >= 0) {
+                result[i] = 1;
+            } else {
+                result[i] = 0;
+            }
+        }
+        return result;
+    }
 }
