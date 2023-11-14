@@ -38,21 +38,21 @@ public class GraphFlow {
 
     private void augment(int[] tempPath, int minCapacity) {
         for (int i = 0; i < tempPath.length - 1; i++) {
-            boolean forward = false;
-            for (DGraphWtAL.GNode list = this.network.OutAL[tempPath[i]]; list != null; list = list.next) {
-                if (list.nbr == tempPath[i + 1]) {
-                    list.mark += minCapacity;
-                    for (DGraphWtAL.GNode otherList = this.network.InAL[tempPath[i + 1]]; otherList != null; otherList = otherList.next) {
-                        if (otherList.nbr == tempPath[i]) {
-                            otherList.mark += minCapacity;
+            boolean forward = this.network.testEdge(tempPath[i], tempPath[i + 1]);
+            if (forward){
+                for (DGraphWtAL.GNode list = this.network.OutAL[tempPath[i]]; list != null; list = list.next) {
+                    if (list.nbr == tempPath[i + 1]) {
+                        list.mark += minCapacity;
+                        for (DGraphWtAL.GNode otherList = this.network.InAL[tempPath[i + 1]]; otherList != null; otherList = otherList.next) {
+                            if (otherList.nbr == tempPath[i]) {
+                                otherList.mark += minCapacity;
+                            }
                         }
+                        break;
                     }
-
-                    forward = true;
-                    break;
                 }
             }
-            if (!forward) {
+            else {
                 for (DGraphWtAL.GNode list = this.network.OutAL[tempPath[i + 1]]; list != null; list = list.next) {
                     if (list.nbr == tempPath[i]) {
                         list.mark -= minCapacity;
@@ -61,7 +61,6 @@ public class GraphFlow {
                                 otherList.mark -= minCapacity;
                             }
                         }
-
                         break;
                     }
                 }
@@ -87,16 +86,7 @@ public class GraphFlow {
     }
 
     public int[] tSideCut(){
-        int[] result = new int[network.n];
-        for (int i = 0; i < network.n; i++) {
-            if(i != source && i != target){
-                int[] reachableNodes = residual.reachableNode(i);
-                if(reachableNodes[target] == 1){
-                    result[i] = 1;
-                }
-            }
-        }
-        return result;
+        return residual.reverseReachableNode(target);
     }
 
 }
