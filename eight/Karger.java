@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.*;
 
 public class Karger extends GraphWtAL {
 
@@ -73,11 +73,43 @@ public class Karger extends GraphWtAL {
                     i++;
                 }
             }
-//            finding the minimum edge count over all iterations
+//          finding the minimum edge count over all iterations
             if (minCutEdgesCount > remainEdges) {
                 minCutEdgesCount = remainEdges;
+//              updating mark array based on the union-find so array shows index of piece
+//              the union-find values might differ and do not start from zero so I have to find a way to kinda map the
+//              the .find() to 0 to k numbers.
+                TreeSet<Integer> uniquePiece = new TreeSet<>();
+                for (int j = 0; j < n; j++) {
+                    mark[j] = unionFind.find(j);
+                    uniquePiece.add(mark[j]);
+                }
+                int index = 0;
+                while (!uniquePiece.isEmpty()) {
+                    Integer temp = uniquePiece.pollFirst();
+                    if (temp == null)
+                        break;
+                    for (int j = 0; j < n; j++) {
+                        if (mark[j] == temp) {
+                            mark[j] = index;
+                        }
+                    }
+                    index++;
+                }
             }
             iteration += 1;
+        }
+//      printing nodes in each piece in a single line
+        int index = 0;
+        while (index < k) {
+            for (int j = 0; j < n; j++) {
+                if (mark[j] == index) {
+                    System.out.print(j);
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+            index++;
         }
         return minCutEdgesCount;
     }
