@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -12,6 +11,7 @@ public class Between extends GraphWtAL {
     }
 
     public void betFind() {
+//      defining variables that are needed for next part
         int[] d;
         int[] p;
         float[] b;
@@ -53,6 +53,7 @@ public class Between extends GraphWtAL {
             }
         }
 
+//      final part of calculation to make numbers comparable
         int nodes = (2 * n) - 1;
         int totalPath = (n * n) - (3 * n) + 2;
         for (int j = 0; j < this.n; j++) {
@@ -79,13 +80,9 @@ public class Between extends GraphWtAL {
     public String toString() {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < n; i++) {
-            result.append(i).append(" (").append(mark[i]).append(") : ");
-            for (GNode list = AdjList[i]; list != null; list = list.next) {
-                result.append("\t").append(list.nbr).append(" (").append(list.weight).append(") ");
-            }
-            result.append("\n");
+            result.append(String.format("%.2f", btwn[i])).append("\t");
         }
-        result.append("Between{" + "btwn=").append(Arrays.toString(btwn)).append('}');
-        return result.toString();
+        return super.toString() + result;
+
     }
 }
