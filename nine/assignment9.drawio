@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-27T16:23:55.559Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="bp-pNEJ312eTlgCqRnVx" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-27T16:47:29.613Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="n0QGk11n8MtxAyVY4ImN" version="22.1.4" type="github">
   <diagram name="Page-1" id="pEyNTecjYdGPQF5nlO9Z">
     <mxGraphModel dx="563" dy="307" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -51,6 +51,54 @@
         </mxCell>
         <mxCell id="h4pdcWYtAaPseuTrIoNi-14" value="&lt;div&gt;Number of vertices: 5&lt;/div&gt;&lt;div&gt;Number of edges: 5&lt;/div&gt;&lt;div&gt;Enter edges (pairs of indices):&lt;/div&gt;&lt;div&gt;0 1&lt;/div&gt;&lt;div&gt;0 2&lt;/div&gt;&lt;div&gt;0 3&lt;/div&gt;&lt;div&gt;2 4&lt;/div&gt;&lt;div&gt;3 4&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="470" y="180" width="180" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="h4pdcWYtAaPseuTrIoNi-15" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="370" y="540" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h4pdcWYtAaPseuTrIoNi-16" value="0" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="370" y="480" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h4pdcWYtAaPseuTrIoNi-17" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="320" y="590" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h4pdcWYtAaPseuTrIoNi-18" value="4" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="415" y="590" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h4pdcWYtAaPseuTrIoNi-20" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="h4pdcWYtAaPseuTrIoNi-15" target="h4pdcWYtAaPseuTrIoNi-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="550" as="sourcePoint" />
+            <mxPoint x="550" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h4pdcWYtAaPseuTrIoNi-21" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="h4pdcWYtAaPseuTrIoNi-17" target="h4pdcWYtAaPseuTrIoNi-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="560" as="sourcePoint" />
+            <mxPoint x="560" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h4pdcWYtAaPseuTrIoNi-22" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="h4pdcWYtAaPseuTrIoNi-15" target="h4pdcWYtAaPseuTrIoNi-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="570" as="sourcePoint" />
+            <mxPoint x="570" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h4pdcWYtAaPseuTrIoNi-24" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="h4pdcWYtAaPseuTrIoNi-18" target="h4pdcWYtAaPseuTrIoNi-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="374.3933982822057" y="644.3933982822057" as="sourcePoint" />
+            <mxPoint x="310" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h4pdcWYtAaPseuTrIoNi-25" value="&lt;div&gt;Number of vertices: 5&lt;/div&gt;&lt;div&gt;Number of edges: 5&lt;/div&gt;&lt;div&gt;Enter edges (pairs of indices):&lt;/div&gt;&lt;div&gt;0 1&lt;/div&gt;&lt;div&gt;0 2&lt;/div&gt;&lt;div&gt;2 3&lt;/div&gt;&lt;div&gt;2 4&lt;/div&gt;&lt;div&gt;3 4&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="450" width="180" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="h4pdcWYtAaPseuTrIoNi-26" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="370" y="420" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h4pdcWYtAaPseuTrIoNi-27" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="h4pdcWYtAaPseuTrIoNi-16" target="h4pdcWYtAaPseuTrIoNi-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="465" y="460" as="sourcePoint" />
+            <mxPoint x="400" y="460" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
